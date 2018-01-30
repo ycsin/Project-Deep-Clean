@@ -5,13 +5,13 @@
 ------------
 
 
-Since Samsungs TouchWiz ROM is extremely bloated with some some useful features. Project Deep Clean is aimed to provide a comprehensive removable list with descriptions so that we can completely remove useless ~~features~~ and files that we don't need without breaking the functionalities that we actually want to use.
+Since Samsungs TouchWiz ROM is extremely bloated with features. Project Deep Clean is aimed to provide a comprehensive removable list with descriptions so that we can completely remove useless ~~features~~ and files that we don't need without breaking the functionalities that we actually want to use.
 
 ## Disclaimer
-*This is **not** noob-friendly.* I do expect things to break so that you can tell us whats wrong and we will improve this script together.
+*This is **not** noob-friendly.* I do expect things to break so that you can tell us what's wrong and we will improve this script together.
 
-This script can break things in an unexpected, possibly horrible way. Please do a **full backup** of your current setup before attempting. If anything goes terribly wrong, I wont laugh at you but you will be on your own.
-If that disclaimer doesnt scare you, lets proceed.
+This script can break things in an unexpected, possibly horrible way. Please do a **full backup** of your current setup before attempting. If anything goes terribly wrong, I won't laugh at you but you will be on your own.
+If that disclaimer doesn't scare you, let's proceed.
 
 > Qui Audet Adipiscitur
 
@@ -22,7 +22,7 @@ If that disclaimer doesnt scare you, lets proceed.
 - Flash and voilà
 
 ## Feedback
-I need your input so that this list can be as complete as possible. If anything other than the removed ones breaks unexpectedly, please check/provide `logcat | grep <some app>`so that we can find out whats wrong. You can do so via XDA thread or submit commits or fork this source and submit a pull request.
+I need your input so that this list can be as complete as possible. If anything other than the removed ones breaks unexpectedly, please check/provide `logcat | grep <some app>`so that we can find out what's wrong. You can do so via XDA thread or submit commits or fork this source and submit a pull request.
 
 ## Credit
 - [SoLdieR9312](https://forum.xda-developers.com/member.php?u=4860093 "SoLdieR9312") for his OREO BETA6 Debloat script template.
