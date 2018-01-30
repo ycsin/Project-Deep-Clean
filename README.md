@@ -1,11 +1,11 @@
 # Project Deep Clean
-#### For Samsung Galaxy S8 G950FD AQL5 
-##### And probably other variants.
+#### Originally for Samsung Galaxy S8 G950FD AQL5 
+##### And probably other variants as well as future TW releases.
 
 ------------
 
 
-Since Samsungs TouchWiz ROM is extremely bloated with some some useful features. Project Deep Clean is aimed to provide a comprehensive removable list with descriptions so that we can completely remove useless ~~features~~ and files that we dont need without breaking the functionalities that we actually want to use.
+Since Samsungs TouchWiz ROM is extremely bloated with some some useful features. Project Deep Clean is aimed to provide a comprehensive removable list with descriptions so that we can completely remove useless ~~features~~ and files that we don't need without breaking the functionalities that we actually want to use.
 
 ## Disclaimer
 *This is **not** noob-friendly.* I do expect things to break so that you can tell us whats wrong and we will improve this script together.
