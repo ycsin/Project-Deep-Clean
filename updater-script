@@ -170,8 +170,8 @@ delete_recursive("/system/app/SLocation"); #Samsung location SDK, probably neede
 delete_recursive("/system/priv-app/Fmm");  #Samsung's Find My Mobile feature
 delete_recursive("/system/priv-app/NSFusedLocation_v3.0_DREAM");
 delete("/system/etc/permissions/com.sec.feature.slocation_level3.xml");
-delete_recursive("/system/lib/slocation");
-delete_recursive("/system/lib64/slocation");
+delete_recursive("/system/lib/slocation"); #Samsung location library
+delete_recursive("/system/lib64/slocation"); #Samsung location library
 
 ##MIRRORING
 delete_recursive("/system/app/SmartMirroring"); #Samsung's Smart Mirroring
@@ -236,7 +236,9 @@ delete_recursive("/system/priv-app/ThemeCenter"); #Samsung's Theme Center
 ##TOUCHWIZ FEATURES
 delete_recursive("/system/app/AdvSoundDetector2015"); #Recognize baby cry,etc
 delete_recursive("/system/app/BeamService");  #S Beam
+delete_recursive("/system/app/DictDiotek_update"); #Dictionary for Samsung
 delete_recursive("/system/app/EasymodeContactsWidget81"); #Easy Mode's contacts widget
+delete_recursive("/system/app/CoreApps_SDK_2017"); #Enhanced features
 delete_recursive("/system/app/HandwritingService"); #Samsung's hand writing service
 delete_recursive("/system/app/MyGalaxy"); #An app that provide you some Samsung contents
 delete_recursive("/system/app/SafetyInformation"); #Safety Information*
@@ -248,6 +250,7 @@ delete_recursive("/system/app/SPdfNote"); #Samsung's draw on pdf app
 delete_recursive("/system/app/SPrintSpooler7"); #Samsung Print Spooler
 delete_recursive("/system/app/UserManual"); #User Manual
 delete_recursive("/system/app/WebManual"); #Web manual app
+delete_recursive("/system/priv-app/BeaconManager"); #Something that communicates with gadgets around you(?)*
 delete_recursive("/system/priv-app/ConfigUpdater"); #DESCRIPTION_NEEDED
 delete_recursive("/system/priv-app/Crane"); #Required for Call+
 delete_recursive("/system/priv-app/CSC");
@@ -276,7 +279,7 @@ delete_recursive("/system/priv-app/Upday"); #Some news app, link: play.google.co
 delete_recursive("/system/priv-app/Ignite-Globe_2.2.003-996_releaseProduction");
 delete_recursive("/system/app/yandex.search"); #Yandex search engine
 delete_recursive("/system/app/ubank_samsung"); #DESCRIPTION_NEEDED
-delete_recursive("/system/app/shahid");
+delete_recursive("/system/app/shahid"); #No idea what's this
 delete_recursive("/system/app/NaverV_N"); #https://play.google.com/store/apps/details?id=com.naver.vapp
 
 
@@ -296,13 +299,13 @@ delete("/system/framework/com.dsi.ant.antradio_library.jar");
 ### CARRIER
 delete_recursive("/system/app/My_Singtel_4.4_com.singtel"); #Singtel carrier app
 delete_recursive("/system/priv-app/Ignite-Singtel_1.7.306_releaseProduction"); #Singtel carrier app
-delete("/system/framework/com.verizon.epdg.jar");
-delete("/system/etc/permissions/com.verizon.net.xml");
-delete("/system/framework/com.verizon.net.jar");
-delete("/system/etc/permissions/com.verizon.phone.xml");
-delete("/system/framework/com.verizon.phone.jar");
-delete("/system/etc/permissions/com.verizon.ptt.api.xml");
-delete("/system/framework/com.verizon.ptt.api.jar");
+delete("/system/framework/com.verizon.epdg.jar"); #Verizon-related
+delete("/system/etc/permissions/com.verizon.net.xml"); #Verizon-related
+delete("/system/framework/com.verizon.net.jar"); #Verizon-related
+delete("/system/etc/permissions/com.verizon.phone.xml"); #Verizon-related
+delete("/system/framework/com.verizon.phone.jar"); #Verizon-related
+delete("/system/etc/permissions/com.verizon.ptt.api.xml"); #Verizon-related
+delete("/system/framework/com.verizon.ptt.api.jar"); #Verizon-related
 
 
 
@@ -400,6 +403,12 @@ delete("/system/etc/sysconfig/google_vr_build.xml");
 
 
 ### MISC FOLDERS & FILES
+delete_recursive("/system/app/aligned_signed_secRCS_BB"); #Non-existence junk
+delete_recursive("/system/app/apps_brasil_signed_aligned"); #Non-existence junk
+delete_recursive("/system/app/TuiService"); #Some security thing by Trustonic, more info: www.tuicool.com/articles/miq2ay
+delete_recursive("/system/priv-app/Fresco_1.0"); #Probably this http://frescolib.org/
+delete_recursive("/system/priv-app/SNS_v2_N"); #Social Network Service*
+delete_recursive("/system/priv-app/UIBCVirtualSoftkey"); #Floating button(?)*
 delete("/system/etc/irremovable_list.txt");
 delete("/system/etc/ASKSTS.xml");
 delete("/system/info.extra");
@@ -416,12 +425,9 @@ delete("/system/media/audio/ui/Air_Command_Hover_Focus.ogg");
 
 
 ### UNKNOWNS
-delete_recursive("/system/app/aligned_signed_secRCS_BB");
-delete_recursive("/system/app/apps_brasil_signed_aligned");
+
 delete_recursive("/system/app/BCService"); #DESCRIPTION_NEEDED
-delete_recursive("/system/app/CoreApps_SDK_2017");
 delete_recursive("/system/app/CtsShimPrebuilt");
-delete_recursive("/system/app/DictDiotek_update"); #Related to dictionary*
 delete_recursive("/system/app/DownloadableKeystore");
 delete_recursive("/system/app/DRParser");
 delete_recursive("/system/app/PartnerBookmarksProvider");
@@ -429,18 +435,14 @@ delete_recursive("/system/app/PlayAutoInstallConfig");
 delete_recursive("/system/app/Preconfig");
 delete_recursive("/system/app/RcsSettings");
 delete_recursive("/system/app/TasksProvider"); #DESCRIPTION_NEEDED
-delete_recursive("/system/app/TuiService"); #Some security thing by Trustonic, more info: www.tuicool.com/articles/miq2ay
 
 delete_recursive("/system/priv-app/AutoPreconfig"); #DESCRIPTION_NEEDED
-delete_recursive("/system/priv-app/BeaconManager"); #Something that communicates with gadgets around you(?)*
 delete_recursive("/system/priv-app/DCMService");
-delete_recursive("/system/priv-app/Fresco_1.0"); #Probably this http://frescolib.org/
 delete_recursive("/system/priv-app/PreloadInstaller");
 delete_recursive("/system/priv-app/SecSetupWizard2015");
 delete_recursive("/system/priv-app/SharedStorageBackup");
-delete_recursive("/system/priv-app/SNS_v2_N"); #Social Network Service*
 delete_recursive("/system/priv-app/SVCAgent");
-delete_recursive("/system/priv-app/UIBCVirtualSoftkey"); #Floating button(?)*
+
 
 
 
@@ -449,4 +451,3 @@ ifelse(is_mounted("/system"), unmount("/system"));
 ui_print("");
 ui_print("Done. Please reboot.");
 ui_print("");
-sleep(1);
