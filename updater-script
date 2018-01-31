@@ -16,6 +16,18 @@ delete_recursive("/system/app/KnoxRemoteContentsProvider"); #Knox Related
 delete_recursive("/system/app/KnoxSetupWizardClient"); #Knox Related
 delete_recursive("/system/app/KnoxSwitcher"); #Knox Related
 delete_recursive("/system/priv-app/KnoxDesktopLauncher"); #Knox-related*
+delete("/system/etc/permissions/knoxsdk_edm.xml");
+delete("/system/etc/permissions/knoxsdk_mdm.xml");
+delete("/system/framework/knoxsdk.jar");
+#delete("/system/framework/arm/boot-knoxsdk.art"); #Delete this will fail to boot [00001]
+#delete("/system/framework/arm/boot-knoxsdk.oat"); #Delete this will fail to boot [00001]
+#delete("/system/framework/arm64/boot-knoxsdk.art"); #Delete this will fail to boot [00001]
+#delete("/system/framework/arm64/boot-knoxsdk.oat"); #Delete this will fail to boot [00001]
+delete("/system/framework/knoxvpnuidtag.jar");
+#delete("/system/framework/arm/boot-knoxvpnuidtag.art"); #Delete this will fail to boot [00001]
+#delete("/system/framework/arm/boot-knoxvpnuidtag.oat"); #Delete this will fail to boot [00001]
+#delete("/system/framework/arm64/boot-knoxvpnuidtag.art"); #Delete this will fail to boot [00001]
+#delete("/system/framework/arm64/boot-knoxvpnuidtag.oat"); #Delete this will fail to boot [00001]
 
 ##ENTERPRISE SOLUTIONS
 delete_recursive("/system/app/SamsungDLPService"); #Samsung's Data Loss Prevention for enterprise, probably related to Knox
@@ -43,10 +55,11 @@ delete_recursive("/system/containers");
 delete_recursive("/system/preload"); #SmartSwitch
 delete_recursive("/system/preloadedkiosk");
 delete_recursive("/system/preloadedsso");
-delete("/system/framework/knoxsdk.jar");
-delete("/system/framework/knoxvpnuidtag.jar");
-delete("/system/etc/permissions/knoxsdk_edm.xml");
-delete("/system/etc/permissions/knoxsdk_mdm.xml");
+delete("/system/framework/timakeystore.jar");
+#delete("/system/framework/arm/boot-timakeystore.art"); #Delete this will fail to boot [00001]
+#delete("/system/framework/arm/boot-timakeystore.oat"); #Delete this will fail to boot [00001]
+#delete("/system/framework/arm64/boot-timakeystore.art"); #Delete this will fail to boot [00001]
+#delete("/system/framework/arm64/boot-timakeystore.oat"); #Delete this will fail to boot [00001]
 delete_recursive("/system/etc/secure_storage/com.samsung.android.personalpage.service"); #Private Mode
 delete_recursive("/system/etc/secure_storage/com.samsung.android.personalpage.service!dex");
 delete_recursive("/system/etc/secure_storage/com.samsung.android.securitylogagentsystem");
@@ -70,6 +83,8 @@ delete_recursive("/system/app/AllshareFileShare"); #File share option using AllS
 delete_recursive("/system/app/AllshareMediaShare"); #Related to AllShare
 #delete("/system/etc/permissions/allshare_library.xml"); #delete this kills Gallery3D
 #delete("/system/framework/allshare.jar"); #delete this kills Gallery3D
+#delete("/system/framework/oat/arm/allshare.odex"); #delete this kills Gallery3D
+#delete("/system/framework/oat/arm64/allshare.odex"); #delete this kills Gallery3D
 
 ##BIXBY-RELATED AND VOICE
 delete_recursive("/system/app/STalkback"); #Samsung TalkBack
@@ -302,6 +317,9 @@ delete_recursive("/system/priv-app/BadgeProvider_N"); #This was needed to displa
 #delete_recursive("/system/app/VideoEditorLite_Dream_N"); #Video Editor
 #delete_recursive("/system/app/VideoTrimmer_Dream"); #Video trimmer
 #delete_recursive("/system/priv-app/SamsungVideoPlayer2016"); #Samsung Video Player
+#delete("/system/framework/videoeditor.jar");
+#delete("/system/framework/oat/arm/videoeditor_sdk.odex");
+#delete("/system/framework/oat/arm64/videoeditor_sdk.odex");
 
 ##WEATHER
 delete_recursive("/system/app/Weather2017"); #Samsung's Weather App
