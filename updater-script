@@ -26,6 +26,7 @@ delete_recursive("/system/app/MDMApp"); #Mobile Device Management, enterprise so
 
 ##KNOX-RELATED
 delete_recursive("/system/app/BBCAgent"); #Knox-related*
+delete_recursive("/system/app/ESEServiceAgent"); #NFC-related thingy, part of Knox, link: seap.samsung.com/sdk/knox-ucm-sdk
 delete_recursive("/system/app/UniversalMDMClient"); #Knox-related*
 delete_recursive("/system/container/KnoxBBCProvider"); #Knox-related*
 delete_recursive("/system/priv-app/SPDClient"); #SecurityPolicyData Client, related to device security implemented by Samsung before Knox*
@@ -39,7 +40,7 @@ delete_recursive("/system/app/SecurityLogAgent"); #Root detection related, Knox-
 delete_recursive("/system/app/SysScope"); #Samsung's root detection software
 delete_recursive("/system/container");
 delete_recursive("/system/containers");
-delete_recursive("/system/preload");
+delete_recursive("/system/preload"); #SmartSwitch
 delete_recursive("/system/preloadedkiosk");
 delete_recursive("/system/preloadedsso");
 delete("/system/framework/knoxsdk.jar");
@@ -53,6 +54,7 @@ delete_recursive("/system/etc/secure_storage/com.samsung.android.securitylogagen
 delete_recursive("/system/etc/secure_storage/com.samsung.android.securitylogagent!dex");
 delete_recursive("/system/etc/tima"); #Knox-related
 delete("/system/bin/tima_dump_log");
+delete("/system/tima_measurement_info");
 
 
 
@@ -105,7 +107,11 @@ delete("/system/etc/preferred-apps/browser.xml");
 #delete_recursive("/system/app/SamsungCalendar_Stable_4012"); #Samsung Calendar
 
 ##CAMERA
-delete_recursive("/system/app/VirtualTour_N_OS"); #Virtual Tour mode for camera
+#delete_recursive("/system/app/VirtualTour_N_OS"); #Virtual Tour mode for camera
+#delete_recursive("/system/priv-app/SamsungCamera7"); #Samsung Camera app
+#delete_recursive("/system/priv-app/ShootingModeProvider2"); #Samsung Camera shooting modes provider
+#delete_recursive("/system/priv-app/StickerProvider"); #Samsung Camera sticker provider
+#delete_recursive("/system/priv-app/StickerStamp"); #Samsung Camera sticker stamp
 
 ##CLOUD
 delete_recursive("/system/app/CloudGateway2017"); #Connect to Samsung Cloud/GDrive option in My Files app
@@ -145,8 +151,16 @@ delete("/system/etc/permissions/com.sec.feature.cover.sview.xml");
 delete("/system/etc/permissions/com.sec.feature.cover.xml");
 
 ##GALLERY
-delete_recursive("/system/app/StoryEditor_Dream_N"); #Samsung Story Editor
-delete_recursive("/system/priv-app/StoryService"); #Create story out of your gallery*
+#delete_recursive("/system/app/ApexService"); #Unknown gallery thingy
+#delete_recursive("/system/app/InterativePanoramaViewer_WQHD"); #Virtual shot viewer
+#delete_recursive("/system/app/MotionPanoramaViewer"); #Motion panorama viewer
+#delete_recursive("/system/app/Panorama360Viewer"); #Surround shot
+#delete_recursive("/system/app/SelfMotionManoramaViewer"); #Motion wide-angle selfie viewer
+#delete_recursive("/system/app/StoryEditor_Dream_N"); #Samsung Story Editor
+#delete_recursive("/system/priv-app/CMHProvider"); #Related to gallery and Highlight player
+#delete_recursive("/system/priv-app/PhotoStudio_WQHD_Dream"); #Samsung's Photo Editor
+#delete_recursive("/system/priv-app/SecGallery2015"); #Samsung Gallery3D
+#delete_recursive("/system/priv-app/StoryService"); #Create story out of your gallery photos
 
 ##GALAXY APP
 delete_recursive("/system/priv-app/GalaxyApps_3xh"); #Samsung's App Store
@@ -156,6 +170,14 @@ delete_recursive("/system/priv-app/GalaxyAppsWidget_Phone_Dream"); #Samsung's Ap
 delete_recursive("/system/priv-app/Finder_v7"); #S Finder
 delete("/system/etc/permissions/com.sec.feature.findo.xml"); #Galaxy Finder
 delete("/system/etc/permissions/com.samsung.feature.galaxyfinder_v7.xml");
+
+##GAME Manager
+#delete_recursive("/system/app/GameOptimizer"); #Game Optimizing Service
+#delete_recursive("/system/priv-app/GameHome_Flumen"); #Game Launcher
+#delete_recursive("/system/priv-app/GameTools_Dream"); #Game Tools
+#delete("/system/framework/oat/arm/gamemanager.odex");
+#delete("/system/framework/oat/arm64/gamemanager.odex");
+#delete("/system/framework/gamemanager.jar");
 
 ##GEAR
 delete_recursive("/system/app/GearManagerStub"); #Samsung Gear Manager
@@ -197,9 +219,10 @@ delete("/system/etc/sysconfig/samsungpushservice.xml");
 
 ##SETTINGS
 delete_recursive("/system/app/MhdrService"); #Probably related to Video Enhancer*
+delete_recursive("/system/app/UniversalSwitch"); #Required for 'Universal Switch' inside Accessibility>Direct access
 delete_recursive("/system/priv-app/AccessControl_N");
 delete_recursive("/system/priv-app/AssistantMenu_N");
-delete_recursive("/system/priv-app/ColorBlind_N"); #Required for color adjustment
+delete_recursive("/system/priv-app/ColorBlind_N"); #Required for 'Color adjustment' inside Accessibility>Vision
 
 ##Link Sharing
 delete_recursive("/system/app/ShareLink_2017"); #Samsung's Link Sharing, link: https://play.google.com/store/apps/details?id=com.samsung.android.app.simplesharing
@@ -209,6 +232,8 @@ delete_recursive("/system/app/SmartcardService"); #Related to smart card*
 delete_recursive("/system/priv-app/SmartcardManager"); #Smart card manager, probably related to NFC card(?)*
 delete("/system/etc/permissions/com.sec.smartcard.auth.xml");
 delete("/system/framework/secsmartcard.jar");
+delete("/system/framework/oat/arm/secsmartcard.odex");
+delete("/system/framework/oat/arm64/secsmartcard.odex");
 
 ##SMART MANAGER/DEVICE SECURITY(McAfee)
 delete_recursive("/system/app/SCPMClient_N"); #Related to Smart Manager
@@ -236,6 +261,9 @@ delete_recursive("/system/priv-app/ThemeCenter"); #Samsung's Theme Center
 ##TOUCHWIZ FEATURES
 delete_recursive("/system/app/AdvSoundDetector2015"); #Recognize baby cry,etc
 delete_recursive("/system/app/BeamService");  #S Beam
+delete("/system/media/audio/ui/S_Beam_end.ogg");
+delete("/system/media/audio/ui/S_Beam_error.ogg");
+delete("/system/media/audio/ui/S_Beam_start.ogg");
 delete_recursive("/system/app/DictDiotek_update"); #Dictionary for Samsung
 delete_recursive("/system/app/EasymodeContactsWidget81"); #Easy Mode's contacts widget
 delete_recursive("/system/app/CoreApps_SDK_2017"); #Enhanced features
@@ -247,6 +275,7 @@ delete_recursive("/system/app/SamsungConcierge_stub"); #http://www.samsung.com/s
 delete_recursive("/system/app/SamsungTTS"); #Samsung Text To Speech
 delete_recursive("/system/app/SmartReminder"); #Samsung's Smart Reminder app
 delete_recursive("/system/app/SPdfNote"); #Samsung's draw on pdf app
+delete_recursive("/system/app/SplitSoundService"); #Maybe required for Samsung SoundAssistant
 delete_recursive("/system/app/SPrintSpooler7"); #Samsung Print Spooler
 delete_recursive("/system/app/UserManual"); #User Manual
 delete_recursive("/system/app/WebManual"); #Web manual app
@@ -260,12 +289,19 @@ delete_recursive("/system/priv-app/OMCAgent"); #Configuration Updater
 delete_recursive("/system/priv-app/UnifiedProfile"); #Samsung Profile
 delete_recursive("/system/priv-app/SamsungMagnifier3"); #Required to use your phone's camera as a magnifier
 delete_recursive("/system/priv-app/KeyguardWallpaperUpdator"); #Required for lockscreen wallpaper changing feature
-delete_recursive("/system/priv-app/WallpaperCropper"); #Samsung's Wallpaper Cropper*
-#delete_recursive("/system/priv-app/VoWifiSPG"); #Voice over WiFi
+delete_recursive("/system/priv-app/WallpaperCropper"); #Samsung's Wallpaper Cropper
 delete("/system/etc/permissions/com.sec.feature.barcode_emulator.xml"); #Barcode Emulator
+#delete("/system/media/audio/ui/SideSync_Connected.ogg"); #SideSync
 
 ##TOUCHWIZ HOME
+#delete_recursive("/system/priv-app/TouchWizHome_2017"); #TouchWiz Launcher
 delete_recursive("/system/priv-app/BadgeProvider_N"); #This was needed to display notification count on apps when I was using Galaxy Ace*
+
+##VIDEO PLAYER
+#delete_recursive("/system/app/SlowMotion_Dream_N"); #Slow and fastmotion video player and editor
+#delete_recursive("/system/app/VideoEditorLite_Dream_N"); #Video Editor
+#delete_recursive("/system/app/VideoTrimmer_Dream"); #Video trimmer
+#delete_recursive("/system/priv-app/SamsungVideoPlayer2016"); #Samsung Video Player
 
 ##WEATHER
 delete_recursive("/system/app/Weather2017"); #Samsung's Weather App
@@ -292,6 +328,8 @@ delete_recursive("/system/app/ANTPlusTest"); #Related to  ANT wireless*
 delete_recursive("/system/priv-app/ANTRadioService"); #play.google.com/store/apps/details?id=com.dsi.ant.service.socket
 delete("/system/etc/permissions/com.dsi.ant.antradio_library.xml");
 delete("/system/framework/com.dsi.ant.antradio_library.jar");
+delete("/system/framework/oat/arm/com.dsi.ant.antradio_library.odex");
+delete("/system/framework/oat/arm64/com.dsi.ant.antradio_library.odex");
 
 
 
@@ -300,12 +338,31 @@ delete("/system/framework/com.dsi.ant.antradio_library.jar");
 delete_recursive("/system/app/My_Singtel_4.4_com.singtel"); #Singtel carrier app
 delete_recursive("/system/priv-app/Ignite-Singtel_1.7.306_releaseProduction"); #Singtel carrier app
 delete("/system/framework/com.verizon.epdg.jar"); #Verizon-related
+delete("/system/framework/oat/arm/com.verizon.epdg.odex"); #Verizon-related
+delete("/system/framework/oat/arm64/com.verizon.epdg.odex"); #Verizon-related
 delete("/system/etc/permissions/com.verizon.net.xml"); #Verizon-related
 delete("/system/framework/com.verizon.net.jar"); #Verizon-related
+delete("/system/framework/oat/arm/com.verizon.net.odex"); #Verizon-related
+delete("/system/framework/oat/arm64/com.verizon.net.odex"); #Verizon-related
 delete("/system/etc/permissions/com.verizon.phone.xml"); #Verizon-related
 delete("/system/framework/com.verizon.phone.jar"); #Verizon-related
+delete("/system/framework/oat/arm/com.verizon.phone.odex"); #Verizon-related
+delete("/system/framework/oat/arm64/com.verizon.phone.odex"); #Verizon-related
 delete("/system/etc/permissions/com.verizon.ptt.api.xml"); #Verizon-related
 delete("/system/framework/com.verizon.ptt.api.jar"); #Verizon-related
+delete("/system/framework/oat/arm/com.verizon.ptt.api.odex"); #Verizon-related
+delete("/system/framework/oat/arm64/com.verizon.ptt.api.odex"); #Verizon-related
+
+
+
+
+### COMMUNICATION OVER IP
+delete_recursive("/system/app/ImsSettings"); #Something related to some messaging service
+#delete_recursive("/system/priv-app/imsservice"); #Ims-related
+#delete_recursive("/system/priv-app/ImsLogger"); #Ims-related
+#delete_recursive("/system/priv-app/ImsTelephonyService"); #Ims-related
+#delete_recursive("/system/priv-app/IPService"); #VoIP-related
+#delete_recursive("/system/priv-app/VoWifiSPG"); #Voice over WiFi
 
 
 
@@ -379,13 +436,23 @@ delete_recursive("/system/app/PhotoTable"); #Photo screen saver
 ### SYSTEM
 delete_recursive("/system/app/AASAservice"); #Probably related to permissions/security
 delete_recursive("/system/app/Hs20Provider"); #Related to wifi scan timing*
-delete_recursive("/system/app/ImsSettings"); #Something related to some messaging service
+
+##Software Update
+delete_recursive("/system/priv-app/SOAgent");
+delete_recursive("/system/priv-app/FotaAgent");
+delete("/system/etc/fota.cer");
 
 
 
 
-### TESTS
-delete_recursive("/system/priv-app/DeviceTest");
+### TESTS 
+#delete_recursive("/system/app/BluetoothTest");
+#delete_recursive("/system/app/SecFactoryPhoneTest");
+#delete_recursive("/system/app/WlanTest");
+#delete_recursive("/system/priv-app/DeviceTest");
+#delete_recursive("/system/priv-app/HwModuleTest");
+#delete_recursive("/system/priv-app/IrisUserTest");
+#delete_recursive("/system/priv-app/LTETest");
 
 
 
@@ -408,18 +475,25 @@ delete_recursive("/system/app/apps_brasil_signed_aligned"); #Non-existence junk
 delete_recursive("/system/app/TuiService"); #Some security thing by Trustonic, more info: www.tuicool.com/articles/miq2ay
 delete_recursive("/system/priv-app/Fresco_1.0"); #Probably this http://frescolib.org/
 delete_recursive("/system/priv-app/SNS_v2_N"); #Social Network Service*
+delete_recursive("/system/app/SnsImageCache_N"); #Probably related to Social Network Service*
 delete_recursive("/system/priv-app/UIBCVirtualSoftkey"); #Floating button(?)*
 delete("/system/etc/irremovable_list.txt");
 delete("/system/etc/ASKSTS.xml");
 delete("/system/info.extra");
 delete_recursive("/system/hidden");
 delete("/system/etc/removable_preload.txt");
-delete("/system/etc/fota.cer");
 delete_recursive("/system/etc/default-permissions");
 delete("/system/etc/purenandpackages.txt");
 delete("/system/etc/purenandpackages_pref.txt");
 delete("/system/etc/nwk_info.xml");
 delete("/system/media/audio/ui/Air_Command_Hover_Focus.ogg");
+delete("/system/media/audio/ui/Pen_att_noti1.ogg"); #S Pen
+delete("/system/media/audio/ui/Pen_att_noti2.ogg"); #S Pen
+delete("/system/media/audio/ui/Pen_att_noti3.ogg"); #S Pen
+delete("/system/media/audio/ui/Pen_det_alert.ogg"); #S Pen
+delete("/system/media/audio/ui/Pen_det_noti1.ogg"); #S Pen
+delete("/system/media/audio/ui/Pen_det_noti2.ogg"); #S Pen
+delete("/system/media/audio/ui/Pen_det_noti3.ogg"); #S Pen
 
 
 
@@ -442,7 +516,6 @@ delete_recursive("/system/priv-app/PreloadInstaller");
 delete_recursive("/system/priv-app/SecSetupWizard2015");
 delete_recursive("/system/priv-app/SharedStorageBackup");
 delete_recursive("/system/priv-app/SVCAgent");
-
 
 
 
