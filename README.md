@@ -22,7 +22,7 @@ If that disclaimer doesn't scare you, let's proceed.
 - Flash and voilà
 
 ## Feedback
-I need your input so that this list can be as complete as possible. If anything other than the removed ones breaks unexpectedly, please check/provide `logcat | grep <some app>`so that we can find out what's wrong. You can do so via XDA thread or submit commits or fork this source and submit a pull request.
+I need your input so that this list can be as complete as possible. If anything other than the removed ones breaks unexpectedly, please check/provide `logcat | grep <some app>`so that we can find out what's wrong. You can do so via [XDA thread]("https://forum.xda-developers.com/galaxy-s8/samsung-galaxy-s8--s8-cross-device-development/zip-project-deep-clean-actually-t3743184") or submit commits or fork this source and submit a pull request.
 
 ## Credit
 - [SoLdieR9312](https://forum.xda-developers.com/member.php?u=4860093 "SoLdieR9312") for his OREO BETA6 Debloat script template.
