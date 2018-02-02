@@ -353,7 +353,7 @@ delete("/system/framework/oat/arm64/com.dsi.ant.antradio_library.odex");
 
 
 ### CARRIER
-delete_recursive("/system/app/My_Singtel_4.4_com.singtel"); #Singtel carrier app
+delete_recursive("/system/app/My_Singtel_4.4_com.singtel.mysingtel"); #Singtel carrier app
 delete_recursive("/system/priv-app/Ignite-Singtel_1.7.306_releaseProduction"); #Singtel carrier app
 delete("/system/framework/com.verizon.epdg.jar"); #Verizon-related
 delete("/system/framework/oat/arm/com.verizon.epdg.odex"); #Verizon-related
