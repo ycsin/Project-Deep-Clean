@@ -23,6 +23,7 @@ If that disclaimer doesn't scare you, let's proceed.
 - Flash and voilà
 
 **Rescue Zip:**
+
 If you need anything back to the system, a rescue flashable zip is provided for you to put anything you need inside the system folder and flash.
 
 If your system failed to boot and you want to see what happened, you will need to add these lines to build.prop and flash for you to logcat during boot:
