@@ -164,10 +164,10 @@ delete("/system/etc/permissions/com.sec.feature.people_edge_notification.xml");
 delete("/system/etc/sysconfig/samsungemail.xml");
 delete("/system/etc/preferred-apps/com.samsung.android.email.provider.xml");
 
-##EMERGENCY MODE
-delete_recursive("/system/app/EmergencyLauncher"); #Emergency Launcher
-delete_recursive("/system/app/EmergencyModeService"); #Emergency Mode Service in Power Option
-delete_recursive("/system/app/EmergencyProvider"); #Emergency Provider
+##EMERGENCY MODE & MAX BATTERY SAVING MODE
+#delete_recursive("/system/app/EmergencyLauncher"); #Emergency Launcher
+#delete_recursive("/system/app/EmergencyModeService"); #Emergency Mode Service
+#delete_recursive("/system/app/EmergencyProvider"); #Emergency Provider
 
 ##FLIP COVER & COVER RELATED
 delete_recursive("/system/priv-app/LedCoverAppDream"); #Probably related to Samsung's Led View Cover*
@@ -201,7 +201,7 @@ delete_recursive("/system/priv-app/Finder_v7"); #S Finder
 delete("/system/etc/permissions/com.sec.feature.findo.xml"); #Galaxy Finder
 delete("/system/etc/permissions/com.samsung.feature.galaxyfinder_v7.xml");
 
-##GAME Manager
+##GAME MANAGER
 #delete_recursive("/system/app/GameOptimizer"); #Game Optimizing Service
 #delete_recursive("/system/priv-app/GameHome_Flumen"); #Game Launcher
 #delete_recursive("/system/priv-app/GameTools_Dream"); #Game Tools
@@ -227,7 +227,7 @@ delete("/system/etc/permissions/com.sec.feature.slocation_level3.xml");
 delete_recursive("/system/lib/slocation"); #Samsung location library
 delete_recursive("/system/lib64/slocation"); #Samsung location library
 
-##Messaging
+##MESSAGING
 #delete_recursive("/system/priv-app/Messaging_SEP81");  #Samsung's Messaging App
 
 ##MIRRORING
@@ -256,14 +256,14 @@ delete("/system/etc/sysconfig/samsungpushservice.xml");
 ##SETTINGS
 #delete_recursive("/system/app/EasyOneHand3"); #One-handed mode
 delete_recursive("/system/app/MhdrService"); #Probably related to Video Enhancer*
-#delete_recursive("/system/app/sveservice"); #Probably related to Video Enhancer*
+delete_recursive("/system/app/sveservice"); #Probably related to Video Enhancer*
 delete_recursive("/system/app/UniversalSwitch"); #Required for 'Universal Switch' inside Accessibility>Direct access
 delete_recursive("/system/priv-app/AccessControl_N");
 delete_recursive("/system/priv-app/AssistantMenu_N");
 delete_recursive("/system/priv-app/ColorBlind_N"); #Required for 'Color adjustment' inside Accessibility>Vision
 delete_recursive("/system/priv-app/EmergencyInfo"); #Emergency Information*
 
-##Link Sharing
+##LINK SHARING
 delete_recursive("/system/app/ShareLink_2017"); #Samsung's Link Sharing, link: https://play.google.com/store/apps/details?id=com.samsung.android.app.simplesharing
 
 ##SMART CARD
@@ -282,6 +282,7 @@ delete_recursive("/system/etc/secure_storage/com.samsung.android.sm.devicesecuri
 delete_recursive("/system/etc/secure_storage/com.samsung.android.sm.devicesecurity!dex");
 delete_recursive("/system/etc/secure_storage/com.samsung.android.sm.devicesecurity.tcm");
 delete_recursive("/system/etc/secure_storage/com.samsung.android.sm.devicesecurity.tcm!dex");
+#delete_recursive("/system/priv-app/SmartManager_v5"); #Device Maintenance main app
 
 ##SMART SWITCH
 delete_recursive("/system/app/SmartSwitchAgent"); #Samsung Smart Switch Agent for phone2phone connection
@@ -403,7 +404,7 @@ delete("/system/framework/oat/arm64/com.verizon.ptt.api.odex"); #Verizon-related
 ### COMMUNICATION OVER IP
 delete_recursive("/system/app/ImsSettings"); #Something related to some messaging service
 delete_recursive("/system/priv-app/imsservice"); #Ims-related
-delete_recursive("/system/priv-app/ImsLogger"); #Ims-related
+delete_recursive("/system/priv-app/ImsLogger+"); #Ims-related
 delete_recursive("/system/priv-app/ImsTelephonyService"); #Ims-related
 delete_recursive("/system/priv-app/IPService"); #VoIP-related
 #delete_recursive("/system/priv-app/VoWifiSPG"); #Voice over WiFi
@@ -486,7 +487,9 @@ delete_recursive("/system/priv-app/CtsShimPrivPrebuilt"); #https://source.androi
 delete_recursive("/system/app/vsimservice"); #Virtual Sim Service
 
 
-##Software Update
+
+
+### Software Update
 delete_recursive("/system/priv-app/SOAgent");
 delete_recursive("/system/priv-app/FotaAgent");
 delete("/system/etc/fota.cer");
