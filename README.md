@@ -43,3 +43,4 @@ I need your input so that this list can be as complete as possible. If anything 
 - [SoLdieR9312](https://forum.xda-developers.com/member.php?u=4860093 "SoLdieR9312") for his OREO BETA6 Debloat script template.
 - [foobar66](https://forum.xda-developers.com/member.php?u=3463514 "foobar66") for his debloat shell script as a reference.
 - Google as well as several posts in XDA Developers forum
+- [Editor.md](https://pandao.github.io/editor.md/ "Editor.md") to help me with the README.md
