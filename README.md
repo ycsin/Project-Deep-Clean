@@ -16,10 +16,24 @@ If that disclaimer doesn't scare you, let's proceed.
 > Qui Audet Adipiscitur
 
 ## Usage
+**Debloat script:**
 - Comment out anything you do NOT want to remove from the script using #
 - Save the script
 - Grab a flashable zip and repalce the updater-script inside
 - Flash and voilà
+
+**Rescue Zip:**
+If you need anything back to the system, a rescue flashable zip is provided for you to put anything you need inside the system folder and flash.
+
+If your system failed to boot and you want to see what happened, you will need to add these lines to build.prop and flash for you to logcat during boot:
+
+```shell
+ro.secure=0
+ro.debuggable=1
+persist.service.adb.enable=1
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+```
 
 ## Feedback
 I need your input so that this list can be as complete as possible. If anything other than the removed ones breaks unexpectedly, please check/provide `logcat | grep <some app>`so that we can find out what's wrong. You can do so via [XDA thread](https://forum.xda-developers.com/galaxy-s8/samsung-galaxy-s8--s8-cross-device-development/zip-project-deep-clean-actually-t3743184 "XDA thread") or submit commits or fork this source and submit a pull request.
