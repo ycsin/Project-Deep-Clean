@@ -231,9 +231,9 @@ delete_recursive("/system/lib64/slocation"); #Samsung location library
 #delete_recursive("/system/priv-app/Messaging_SEP81");  #Samsung's Messaging App
 
 ##MIRRORING
-delete_recursive("/system/app/SmartMirroring"); #Samsung's Smart Mirroring
-delete_recursive("/system/app/withTV"); #View on TV feature
-delete_recursive("/system/app/WfdBroker"); #Samsung Smart View
+#delete_recursive("/system/app/SmartMirroring"); #Samsung's Smart Mirroring
+#delete_recursive("/system/app/withTV"); #View on TV feature
+#delete_recursive("/system/app/WfdBroker"); #Samsung Smart View
 
 ##MIRROR LINK/CARMODE
 delete_recursive("/system/app/CarmodeStub"); #Car mode*
@@ -285,8 +285,8 @@ delete_recursive("/system/etc/secure_storage/com.samsung.android.sm.devicesecuri
 #delete_recursive("/system/priv-app/SmartManager_v5"); #Device Maintenance main app
 
 ##SMART SWITCH
-delete_recursive("/system/app/SmartSwitchAgent"); #Samsung Smart Switch Agent for phone2phone connection
-#delete_recursive("/system/priv-app/wssyncmlnps2"); #Required by Smart Switch
+delete_recursive("/system/app/SmartSwitchAgent"); #Samsung Smart Switch Agent for phone to phone connection
+#delete_recursive("/system/priv-app/wssyncmlnps2"); #Required by Smart Switch Desktop support
 
 ##S HEALTH
 delete_recursive("/system/priv-app/HealthService");#Samsung's Health Service app
