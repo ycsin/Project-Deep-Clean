@@ -69,6 +69,7 @@ delete("/system/framework/timakeystore.jar");
 #delete("/system/framework/arm/boot-timakeystore.oat"); #Delete this will fail to boot [00001]
 #delete("/system/framework/arm64/boot-timakeystore.art"); #Delete this will fail to boot [00001]
 #delete("/system/framework/arm64/boot-timakeystore.oat"); #Delete this will fail to boot [00001]
+delete_recursive("/system/priv-app/PersonalPageService");
 delete_recursive("/system/etc/secure_storage/com.samsung.android.personalpage.service"); #Private Mode
 delete_recursive("/system/etc/secure_storage/com.samsung.android.personalpage.service!dex");
 delete_recursive("/system/etc/secure_storage/com.samsung.android.securitylogagentsystem");
@@ -158,6 +159,10 @@ delete_recursive("/system/app/CloudGateway2017"); #Connect to Samsung Cloud/GDri
 delete_recursive("/system/priv-app/SamsungCloudDreamNewIcon"); #Related to Samsung Cloud*
 delete_recursive("/system/priv-app/SamsungCloudGreat"); #Samsung Cloud OREO
 
+##CONNECT
+delete_recursive("/system/app/SamsungConnect"); #Samsung Connect App
+delete_recursive("/system/priv-app/EasySetup"); #Samsung Connect setup(?)
+
 ##CONTACTS
 #delete_recursive("/system/priv-app/SamsungContactsStable"); #Samsung Contacts
 
@@ -177,6 +182,7 @@ delete_recursive("/system/priv-app/CocktailBarService_v3"); #Related to some Clo
 delete_recursive("/system/priv-app/CocktailBarService_v3.2"); #Related to some Clock thingy on Edge OREO
 delete_recursive("/system/priv-app/PeopleStripe"); #People addon for Edge
 delete_recursive("/system/priv-app/TaskEdgePanel_v3"); #Related to edge panel
+delete_recursive("/system/priv-app/TaskEdgePanel_v3.2"); #Related to edge panel OREO
 delete("/system/etc/permissions/com.sec.feature.cocktailpanel.xml");
 delete("/system/etc/permissions/com.sec.feature.edge_v03.xml"); #CocktailBar Service V3
 delete("/system/etc/permissions/com.sec.feature.people_edge_notification.xml");
@@ -236,6 +242,7 @@ delete("/system/etc/permissions/com.samsung.feature.galaxyfinder_v7.xml");
 ##GEAR
 delete_recursive("/system/app/GearManagerStub"); #Samsung Gear Manager
 delete_recursive("/system/priv-app/Gear360Editor_WQHD_Dream"); #Samsung's Gear 360 editor
+delete_recursive("/system/priv-app/Gear360Editor_WQHD_Star"); #Samsung's Gear 360 editor OREO
 
 ##IME (INPUT)
 delete_recursive("/system/app/SamsungIMEv3.0"); #Samsung Keyboard OREO
@@ -249,6 +256,7 @@ delete_recursive("/system/priv-app/NSFusedLocation_v3.0_DREAM"); #Samsung Locato
 delete_recursive("/system/priv-app/NSFusedLocation_v3.2"); #Samsung Locatoin SDK OREO
 delete_recursive("/system/priv-app/RadioBasedLocation");
 delete_recursive("/system/priv-app/RadioBasedLocationManager");
+delete_recursive("/system/priv-app/SamsungPositioning"); #SamsungPositioning
 delete("/system/etc/permissions/com.sec.feature.slocation_level3.xml");
 delete_recursive("/system/lib/slocation"); #Samsung location library
 delete_recursive("/system/lib64/slocation"); #Samsung location library
@@ -347,7 +355,6 @@ delete_recursive("/system/app/HandwritingService"); #Samsung's hand writing serv
 delete_recursive("/system/app/HiyaService"); #Samsung Spam Block feature related OREO
 delete_recursive("/system/app/MyGalaxy"); #An app that provide you some Samsung contents
 delete_recursive("/system/app/SafetyInformation"); #Safety Information*
-delete_recursive("/system/app/SamsungConnect"); #Samsung Connect App
 delete_recursive("/system/app/SamsungConcierge_stub"); #http://www.samsung.com/sg/samsungconcierge/
 delete_recursive("/system/app/SamsungTTS"); #Samsung Text To Speech
 #delete_recursive("/system/app/SmartCallProvider"); #Samsung's Smart Call, http://www.samsung.com/global/galaxy/apps/smart-call/
@@ -359,12 +366,11 @@ delete_recursive("/system/app/SPrintSpooler7"); #Samsung Print Spooler
 delete_recursive("/system/app/SPrintSpooler"); #Samsung Print Spooler OREO
 delete_recursive("/system/app/UserManual"); #User Manual
 delete_recursive("/system/app/WebManual"); #Web manual app
-delete_recursive("/system/priv-app/BeaconManager"); #Something that communicates with gadgets around you(?)*, related to Samsung Connect? | This is Samsung Connect app in OREO
+delete_recursive("/system/priv-app/BeaconManager"); #Nearby Device Scanning in Settings OREO
 delete_recursive("/system/priv-app/ConfigUpdater"); #DESCRIPTION_NEEDED
 delete_recursive("/system/priv-app/Crane"); #Required for Call+
 delete_recursive("/system/priv-app/CSC");
 delete_recursive("/system/priv-app/DesktopModeUiService"); #Samsung DeX
-delete_recursive("/system/priv-app/EasySetup"); #Samsung Connect setup(?)
 delete_recursive("/system/priv-app/EnhanceService");
 delete_recursive("/system/priv-app/OMCAgent"); #Configuration Updater
 delete_recursive("/system/priv-app/OMCAgent5"); #Configuration Updater OREO
@@ -555,13 +561,13 @@ delete("/system/etc/fota.cer");
 
 
 ### TESTS 
-#delete_recursive("/system/app/BluetoothTest");
-#delete_recursive("/system/app/SecFactoryPhoneTest");
-#delete_recursive("/system/app/WlanTest");
-#delete_recursive("/system/priv-app/DeviceTest");
-#delete_recursive("/system/priv-app/HwModuleTest");
-#delete_recursive("/system/priv-app/IrisUserTest");
-#delete_recursive("/system/priv-app/LTETest");
+delete_recursive("/system/app/BluetoothTest");
+delete_recursive("/system/app/SecFactoryPhoneTest");
+delete_recursive("/system/app/WlanTest");
+delete_recursive("/system/priv-app/DeviceTest");
+delete_recursive("/system/priv-app/HwModuleTest");
+delete_recursive("/system/priv-app/IrisUserTest");
+delete_recursive("/system/priv-app/LTETest");
 
 
 
@@ -583,6 +589,7 @@ delete("/system/etc/sysconfig/google_vr_build.xml");
 delete_recursive("/system/app/aligned_signed_secRCS_BB"); #Non-existence junk
 delete_recursive("/system/app/apps_brasil_signed_aligned"); #Non-existence junk
 delete_recursive("/system/app/papergarden"); #Papergarden
+delete_recursive("/system/app/SecurityProviderSEC"); #Security storage
 delete_recursive("/system/app/TuiService"); #Some security thing by Trustonic, more info: www.tuicool.com/articles/miq2ay
 delete_recursive("/system/priv-app/Fresco_1.0"); #Probably this http://frescolib.org/
 delete_recursive("/system/app/RootPA"); #Mobogenie market app
@@ -606,6 +613,7 @@ delete("/system/media/audio/ui/Pen_det_alert.ogg"); #S Pen
 delete("/system/media/audio/ui/Pen_det_noti1.ogg"); #S Pen
 delete("/system/media/audio/ui/Pen_det_noti2.ogg"); #S Pen
 delete("/system/media/audio/ui/Pen_det_noti3.ogg"); #S Pen
+delete_recursive("/system/app/Adaway"); #Adaway in CRAP by SoLdieR9312
 
 
 
@@ -613,34 +621,39 @@ delete("/system/media/audio/ui/Pen_det_noti3.ogg"); #S Pen
 ### UNKNOWNS
 delete_recursive("/system/app/BCService");
 delete_recursive("/system/app/BluetoothMidiService"); #Bluetooth MIDI Service
+delete_recursive("/system/app/BuiltInPrintService"); #Default print service
+delete_recursive("/system/app/CompanionDeviceManager"); #Companion Device Manager
 delete_recursive("/system/app/CtsShimPrebuilt");
 delete_recursive("/system/app/DownloadableKeystore");
 delete_recursive("/system/app/DRParser");
 delete_recursive("/system/app/PartnerBookmarksProvider");
+delete_recursive("/system/app/BookmarkProvider");
 delete_recursive("/system/app/PlayAutoInstallConfig");
 delete_recursive("/system/app/Preconfig");
 delete_recursive("/system/app/RcsSettings");
+delete_recursive("/system/app/SamsungExperienceService");
 delete_recursive("/system/app/TasksProvider");
 
 delete_recursive("/system/priv-app/AutoPreconfig");
 delete_recursive("/system/priv-app/DCMService");
+delete_recursive("/system/priv-app/DiagMonAgent");
+delete_recursive("/system/priv-app/MediaLearningPlatform"); #mlp
 delete_recursive("/system/priv-app/PreloadInstaller"); #Application Installer
 delete_recursive("/system/priv-app/SecSetupWizard2015"); #Samsung setup wizard
 delete_recursive("/system/priv-app/SecSetupWizard_Global");
+delete_recursive("/system/priv-app/SEMFactoryApp"); #SEMFactoryApp
 delete_recursive("/system/priv-app/SharedStorageBackup");
+delete_recursive("/system/priv-app/StubUpdater");
 delete_recursive("/system/priv-app/SVCAgent");
 delete_recursive("/system/priv-app/Tag");
 
 
 
 ### NEW IN OREO - UNTESTED
-#delete_recursive("/system/app/CompanionDeviceManager"); #Companion Device Manager
 #delete_recursive("/system/priv-app/RubinVersion20"); #Customisation Service
-delete_recursive("/system/app/BuiltInPrintService"); #Default print service
 #delete_recursive("/system/app/DAAgent"); #Dual Messenger
-#delete_recursive("/system/priv-app/MediaLearningPlatform"); #mlp
 #delete_recursive("/system/priv-app/SendHelpMessage"); #Safety assistance (Probably linked to emergency mode)
-#delete_recursive("/system/app/SamsungExperienceService");
+
 
 ### Test
 #delete("/system/lib/libpersona.so"); #Error in logcat, unable to boot after delete
