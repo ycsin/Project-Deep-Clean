@@ -294,7 +294,7 @@ delete("/system/etc/sysconfig/samsungpushservice.xml");
 ##SETTINGS
 #delete_recursive("/system/app/EasyOneHand3"); #One-handed mode
 delete_recursive("/system/app/MhdrService"); #Probably related to Video Enhancer*
-delete_recursive("/system/app/sveservice"); #Probably related to Video Enhancer*
+delete_recursive("/system/app/sveservice"); #Samsung Video Enhancer Service
 delete_recursive("/system/app/UniversalSwitch"); #Required for 'Universal Switch' inside Accessibility>Direct access
 delete_recursive("/system/priv-app/AccessControl_N"); #Interation control
 delete_recursive("/system/priv-app/AssistantMenu_N");
