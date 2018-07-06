@@ -5,7 +5,7 @@
 ------------
 
 
-Since Samsungs TouchWiz ROM is extremely bloated with features. Project Deep Clean is aimed to provide a comprehensive removable list with descriptions so that we can completely remove useless ~~features~~ and files that we don't need without breaking the functionalities that we actually want to use.
+Since Samsung TouchWiz ROM is extremely bloated with features. Project Deep Clean is aimed to provide a comprehensive removable list with descriptions so that we can completely remove useless ~~features~~ and files that we don't need without breaking the functionalities that we actually want to use.
 
 ## Disclaimer
 *This is **not** noob-friendly.* I do expect things to break so that you can tell us what's wrong and we will improve this script together.
