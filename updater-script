@@ -631,7 +631,7 @@ delete_recursive("/system/app/BookmarkProvider");
 delete_recursive("/system/app/PlayAutoInstallConfig");
 delete_recursive("/system/app/Preconfig");
 delete_recursive("/system/app/RcsSettings");
-delete_recursive("/system/app/SamsungExperienceService");
+delete_recursive("/system/app/SamsungExperienceService"); #Might lead to Samsung Account FC
 delete_recursive("/system/app/TasksProvider");
 
 delete_recursive("/system/priv-app/AutoPreconfig");
