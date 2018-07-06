@@ -619,11 +619,11 @@ delete_recursive("/system/app/Adaway"); #Adaway in CRAP by SoLdieR9312
 
 
 ### UNKNOWNS
-delete_recursive("/system/app/BCService");
+delete_recursive("/system/app/BCService"); #Barcode Service?
 delete_recursive("/system/app/BluetoothMidiService"); #Bluetooth MIDI Service
 delete_recursive("/system/app/BuiltInPrintService"); #Default print service
 delete_recursive("/system/app/CompanionDeviceManager"); #Companion Device Manager
-delete_recursive("/system/app/CtsShimPrebuilt");
+delete_recursive("/system/app/CtsShimPrebuilt"); #Compatibility Test Suite https://source.android.com/compatibility/cts/setup
 delete_recursive("/system/app/DownloadableKeystore");
 delete_recursive("/system/app/DRParser");
 delete_recursive("/system/app/PartnerBookmarksProvider");
