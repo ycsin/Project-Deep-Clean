@@ -325,6 +325,11 @@ delete_recursive("/system/etc/secure_storage/com.samsung.android.sm.devicesecuri
 delete_recursive("/system/etc/secure_storage/com.samsung.android.sm.devicesecurity.tcm!dex");
 #delete_recursive("/system/priv-app/SmartManager_v5"); #Device Maintenance main app
 
+##SMART STAY
+delete_recursive("/system/priv-app/smartfaceservice");
+delete("/system/etc/permissions/com.sec.android.smartface.smart_stay.xml");
+delete("/system/etc/permissions/privapp-permissions-com.samsung.android.smartface.xml");
+
 ##SMART SWITCH
 delete_recursive("/system/app/SmartSwitchAgent"); #Samsung Smart Switch Agent for phone to phone connection
 #delete_recursive("/system/priv-app/wssyncmlnps2"); #Required by Smart Switch Desktop support
