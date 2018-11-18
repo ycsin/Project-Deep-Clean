@@ -234,7 +234,10 @@ delete("/system/etc/permissions/com.samsung.feature.galaxyfinder_v7.xml");
 ##GAME MANAGER
 #delete_recursive("/system/app/GameOptimizer"); #Game Optimizing Service
 #delete_recursive("/system/priv-app/GameHome_Flumen"); #Game Launcher
+#delete_recursive("/system/priv-app/GameHome"); #Game Launcher
 #delete_recursive("/system/priv-app/GameTools_Dream"); #Game Tools
+#delete("/system/etc/permissions/privapp-permissions-com.samsung.android.game.gamehome.xml");
+#delete("/system/etc/permissions/privapp-permissions-com.samsung.android.game.gametools.xml");
 #delete("/system/framework/oat/arm/gamemanager.odex");
 #delete("/system/framework/oat/arm64/gamemanager.odex");
 #delete("/system/framework/gamemanager.jar");
