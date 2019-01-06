@@ -643,7 +643,7 @@ delete_recursive("/system/app/SamsungExperienceService"); #Might lead to Samsung
 delete_recursive("/system/app/TasksProvider");
 
 delete_recursive("/system/priv-app/AutoPreconfig");
-delete_recursive("/system/priv-app/DCMService");
+delete_recursive("/system/priv-app/DCMService"); #Samsung Link, wireless
 delete_recursive("/system/priv-app/DiagMonAgent");
 delete_recursive("/system/priv-app/MediaLearningPlatform"); #mlp
 delete_recursive("/system/priv-app/PreloadInstaller"); #Application Installer
