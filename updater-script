@@ -627,7 +627,7 @@ delete_recursive("/system/app/Adaway"); #Adaway in CRAP by SoLdieR9312
 
 
 ### UNKNOWNS
-delete_recursive("/system/app/BCService"); #Barcode Service?
+delete_recursive("/system/app/BCService"); #Ril related
 delete_recursive("/system/app/BluetoothMidiService"); #Bluetooth MIDI Service
 delete_recursive("/system/app/BuiltInPrintService"); #Default print service
 delete_recursive("/system/app/CompanionDeviceManager"); #Companion Device Manager
