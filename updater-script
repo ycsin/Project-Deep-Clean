@@ -485,11 +485,11 @@ delete_recursive("/system/etc/epdg");
 ### FACEBOOK PRELOAD
 delete_recursive("/system/app/Facebook_stub"); #Facebook app
 delete_recursive("/system/app/FactoryCameraFB"); #Probably Facebook related(?)
-delete_recursive("/system/app/FBAppManager_NS"); #Facebook related
+delete_recursive("/system/app/FBAppManager_NS"); #Facebook app manager
 delete_recursive("/system/priv-app/AutomationTest_FB"); #Probably Facebook-related(?)*
 delete_recursive("/system/app/AutomationTest_FB"); #Probably Facebook-related(?)* (Automation Test) OREO
-delete_recursive("/system/priv-app/FBInstaller_NS"); #Facebook-related
-delete_recursive("/system/priv-app/FBServices"); #Facebook-related
+delete_recursive("/system/priv-app/FBInstaller_NS"); #Facebook app installer
+delete_recursive("/system/priv-app/FBServices"); #Facebook services
 delete_recursive("/system/priv-app/serviceModeApp_FB"); #Probably Facebook related*
 
 
